@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+    <link rel="stylesheet" href="/static/main.css">
+</head>
+<body>
+    <header>
+        <h1>Hello!!!</h1>
+    </header>
+    <main>
+        <div class="info">
+            {% if user_name %}
+            <p>Hello, {{ user_name }}!! It's my site about bats(not anymore), what do you want to do?</p>
+            {% else %}
+            <p>It's my site about bats(not anymore), what do you want to do?</p>
+            {% endif %}
+        </div>
+        <div class="img">
+            <img src="/static/mainbat.jpeg">
+        </div>
+        <div class="links">
+            {% if user_name %}
+            <a href="/profile/">Profile</a>
+            <a href="{{ url_for('add_post') }}">New post</a>
+            <a href="{{ url_for('logout') }}">Quit</a>
+            {% else %}
+            <a href='/register/'>Reg</a>
+            <a href="/login/">Log</a>
+            {% endif %}
+        </div>
+
+        <div class="posts">
+            <ul class="post">
+                {% for post in posts %}
+                <li>
+                    <h2>{{ post[1] }}</h2>
+                    <p>{{ post[2] }}</p>
+                    <p>{{ post[3] }}</p>
+                    <img src="static/uploads/{{ post[4] }}" width="200">
+                    {% if post[3] == user_name or user_name == 'admin' %}
+                    <a href="/delete_post/{{ post[0] }}" style="color: red;">Delete</a>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </main>
+</body>
+</html>
+
+комментарии
+подписки
+две ленты(общая, подписки)
+
+
+<div>
+<label class ="switch"><input type="checkbox" class = "checkbox"><div class = "slider"></div></label>
+</div>

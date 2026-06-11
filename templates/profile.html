@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <link rel="stylesheet" href="/static/profile.css">
+</head>
+<body>
+    <header>
+        <h1>Добро пожаловать, {{ user_name }}</h1>
+    </header>
+    <main>
+        <div class="info">
+            <p>Ваше инфо</p>
+        </div>
+        <div class="links">
+            <a href="/" class="link">Back to main menu</a>
+            <a href="{{ url_for('add_post') }}" class="link">New post</a>
+            {% if user_name != 'admin' %}
+            <a href="{{ url_for('delete_account') }}" class="link">Delete account</a>
+            {% endif %}
+            <a href="/secret/" class="secret">Secret...</a>
+        </div>
+    </main>
+</body>
+</html>

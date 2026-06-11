@@ -1,0 +1,105 @@
+body {
+  background-color: #00005b;
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  background-color: #39185f;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 64px;
+  color: white;
+}
+
+.info {
+  display: flex;
+  background: #c05fa2;
+  justify-content: center;
+  font-size: 24px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info p {
+  margin: 20px 50px 10px;
+}
+
+.info h4{
+  margin: 10px 10px;
+}
+
+.links {
+  display: flex;
+  background: #f0caa3;
+  flex-direction: column;
+  align-items: center;
+  font-size: 24px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.links a {
+  margin: 10px 0;
+  text-decoration: none;
+  color: black;
+}
+
+.links a:hover {
+  color: #c05fa2;
+  transition: 0.2s;
+}
+
+.img {
+  background: #f0caa3;
+  background: linear-gradient(
+    0deg,
+    rgba(240, 202, 163, 1) 0%,
+    rgba(192, 95, 162, 1) 100%
+  );
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg); /* Starting rotation angle */
+  }
+  to {
+    transform: rotate(360deg); /* Ending rotation angle */
+  }
+}
+
+@keyframes size {
+  0% {
+    width: 50%;
+    height: 30%;
+  }
+  50% {
+    width: 25%;
+    height: 15%;
+  }
+  100% {
+    width: 50%;
+    height: 30%;
+  }
+}
+
+.igor{
+  animation: spin 3s linear infinite, size 3s linear infinite;
+}
+
+img {
+  width: 50%;
+  height: 30%;
+  border: dashed white 10px;
+  margin: 20px;
+}

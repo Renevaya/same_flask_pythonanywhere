@@ -1,0 +1,167 @@
+body {
+  background-color: #00005b;
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  background-color: #39185f;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  animation: move-down 1s ease;
+}
+
+
+@keyframes move-down {
+  from {
+    top: -100px
+  }
+  to {
+    top: 0px
+  }
+}
+
+header h1 {
+  margin: 0;
+  font-size: 64px;
+  color: white;
+}
+
+.info {
+  display: flex;
+  background: #c05fa2;
+  justify-content: center;
+  font-size: 24px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.links {
+  display: flex;
+  background: #f0caa3;
+  justify-content: center;
+  font-size: 24px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.links a {
+  margin: 10px 5%;
+  text-decoration: none;
+  color: black;
+}
+
+.links a:hover {
+  color: #c05fa2;
+  transition: 0.2s;
+}
+
+.img {
+  background: #f0caa3;
+  background: linear-gradient(
+    0deg,
+    rgba(240, 202, 163, 1) 0%,
+    rgba(192, 95, 162, 1) 100%
+  );
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  width: 50%;
+  height: 30%;
+  border: dashed white 10px;
+  margin: 20px;
+  animation: appear 2s;
+}
+
+@keyframes appear{
+  from{
+    opacity: 0%;
+  }
+  to{
+    opacity: 100%;
+  }
+}
+
+.regInfo{
+  height: auto;
+  width: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(240, 202, 163, 1) 0%,
+    rgba(192, 95, 162, 1) 100%
+  );
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.buttonsninput{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px;
+  border: solid white;
+  background: #39185f5d;
+  height: auto;
+  padding: 100px
+}
+
+#img{
+  width: 400px;
+  height: 30px;
+  font-size: 24px;
+}
+
+.form p{
+  margin: 25px 0px 5px;
+  animation: appear 2s ease;
+}
+
+.form textarea{
+  min-height: 30px;
+  max-height: 300px;
+  min-width: 600px;
+  max-width: 900px;
+}
+
+.form input{
+  margin: 20px 5px 20px;
+  height: 30px;
+  width: 600px;
+  animation: appear 2s ease;
+}
+
+.form button{
+  background-color: #f0caa3;
+  height: 60px;
+  width: 300px;
+  margin: 50px;
+  animation: appear 2s ease;
+}
+
+
+.posts{
+  margin: 3%
+}
+
+.post{
+  background-color: #f0caa3;
+  border: dashed white 6px;
+  list-style: none;
+}
+
+.post li h2{
+  color: #913675;
+  font-size: 36px;
+  font-family:monospace;
+  margin-right: 2%;
+}
+
+.post li p{
+  font-size: 24px;
+  margin: 1% 0%
+}

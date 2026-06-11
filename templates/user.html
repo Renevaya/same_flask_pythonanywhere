@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ user[1] }}</title>
+    <link rel="stylesheet" href="/static/profile.css">
+    <link rel="stylesheet" href="/static/main.css">
+</head>
+<body>
+    <header>
+        <h1>Страница пользователя: {{ user[1] }}</h1>
+    </header>
+    <main>
+        <div class="info">
+            <p>Email: {{ user[2] }}</p>
+        </div>
+        <div class="links">
+            <a href="/" class="link">Back to main menu</a>
+            {% if user_name == user[1] %}
+            <a href="/profile/" class="link">My profile</a>
+            {% endif %}
+        </div>
+
+        <div class="posts">
+            <h2>Посты пользователя</h2>
+            <ul class="post">
+                {% for post in posts %}
+                <li>
+                    <h2>{{ post[1] }}</h2>
+                    <p>{{ post[2] }}</p>
+                    {% if post[4] %}
+                    <img src="/static/uploads/{{ post[4] }}" width="200">
+                    {% endif %}
+                </li>
+                {% else %}
+                <li>У пользователя пока нет постов.</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </main>
+</body>
+</html>

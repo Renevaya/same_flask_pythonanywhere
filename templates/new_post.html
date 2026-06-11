@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add post</title>
+    <link rel="stylesheet" href="/static/main.css">
+</head>
+<body>
+    <header>
+        <h1>Add post</h1>
+    </header>
+    <main>
+        <div class="info">
+            <div class="regInfo">
+                <form action="/add_post" method="POST" class="form" enctype="multipart/form-data">
+                    <div class="buttonsninput">
+                        <p>Заголовок</p>
+                        <input type="text" id="title" name="title" required>
+                        <p>Содержание</p>
+                        <textarea name="content" id="content" required></textarea>
+                        <p>Фото</p>
+                        <input type="file" name="image">
+                        <button type="submit">Post</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class='links'>
+            <a href="{{ url_for('profile') }}">Return to profile</a>
+            <a href='/'>Return to main page</a>
+        </div>    
+    </main>
+</body>
+</html>
