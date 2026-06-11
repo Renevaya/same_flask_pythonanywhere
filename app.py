@@ -128,4 +128,5 @@ def delete_account():
     session.clear()
     return redirect('/')
 
-app.run()
+if __name__ == '__main__':
+    app.run()
